@@ -1,6 +1,5 @@
 from typing import Any, Dict, List
 
-from utils.db import save_plan_document
 from utils.gemini_client import generate_plan_with_gemini
 from utils.strengths import merge_performance_and_quiz
 
@@ -49,7 +48,7 @@ def generate_plan_service(
         "performance_details": performance_details,
         "ai_plan": ai_plan,
     }
-    plan_id = save_plan_document(doc)
+    # plan_id = save_plan_document(doc)
 
-    return {"plan_id": str(plan_id), "plan": ai_plan}
+    return {"plan_id": str(1), "plan": ai_plan}
 
