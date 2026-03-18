@@ -83,7 +83,7 @@ export function PlannerForm() {
     })
 
     try {
-      const resp = await fetch('http://localhost:5000/api/plan/generate', {
+      const resp = await fetch('https://flask1-backend.onrender.com/api/plan/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ days, topics, performance: perfPayload }),
