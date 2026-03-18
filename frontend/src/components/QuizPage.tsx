@@ -60,7 +60,7 @@ export function QuizPage() {
 
     const topics = Array.from(new Set(questions.map((q) => q.topic)))
 
-    const resp = await fetch('http://localhost:5000/api/quiz/evaluate', {
+    const resp = await fetch('https://flask1-backend.onrender.com/api/quiz/evaluate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ answers: payloadAnswers, topics }),
